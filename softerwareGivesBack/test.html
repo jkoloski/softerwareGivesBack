@@ -37,7 +37,9 @@
             }*/
             function displayMessage(){
                 console.log("hi");
-                alert("Thank you for filling out this form\nEnjoy the rest of your day!")
+                var test = $("#firstname").val();
+                console.log("first name: " + test);
+                alert("Thank you for filling out this form\nEnjoy the rest of your day!\n\n\nFirst Name: " + $("#firstname").val() + "\nLast Name: " + $("#lastname").val() + "\nDescription: " + $("#description").val());
                 //$("#message").html("<p>Thank you for filling out the form</p>");
 
             }
@@ -56,17 +58,17 @@
         <form action="word.txt" method="post">
         <div class="input-group">
           <span class="input-group-addon btn-info" id="basic-addon1" name="fname">First Name</span>
-          <input type="text" class="form-control" placeholder="First Name" aria-describedby="basic-addon1">
+          <input type="text" id = "firstname" class="form-control" placeholder="First Name" aria-describedby="basic-addon1">
         </div>
         <br>
         <div class="input-group">
           <span class="input-group-addon btn-info" id="basic-addon1" name="lname">Last name</span>
-          <input type="text" class="form-control" placeholder="Last Name" aria-describedby="basic-addon1">
+          <input type="text"  id = "lastname" class="form-control" placeholder="Last Name" aria-describedby="basic-addon1">
         </div>
         <br>
         <div class="input-group">
           <span class="input-group-addon btn-info" onclick="displayMessage()" id="basic-addon1"  name="lname">Description</span>
-          <input type="text" class="form-control" placeholder="Description" aria-describedby="basic-addon1">
+          <input type="text"  id = "description" class="form-control" placeholder="Description" aria-describedby="basic-addon1">
         </div>
          <!--<div id = "message" font-size = "3.75em"></div>-->
         <br>
